@@ -1,0 +1,298 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#ffb6d9,#b3d9ff);
+    overflow-x:hidden;
+}
+
+
+/* Floating Hearts */
+
+.hearts::before{
+    content:"❤️";
+    position:fixed;
+    left:10%;
+    top:100%;
+    font-size:30px;
+    animation:heartFly 8s linear infinite;
+}
+
+.hearts::after{
+    content:"💙 🩷 ❤️ 💖";
+    position:fixed;
+    right:10%;
+    top:100%;
+    font-size:35px;
+    animation:heartFly 10s linear infinite;
+}
+
+
+/* Balloons */
+
+.balloons::before{
+    content:"🎈";
+    position:fixed;
+    left:25%;
+    top:100%;
+    font-size:45px;
+    animation:balloonFly 12s linear infinite;
+}
+
+.balloons::after{
+    content:"🎈 🎈";
+    position:fixed;
+    right:25%;
+    top:100%;
+    font-size:45px;
+    animation:balloonFly 15s linear infinite;
+}
+
+
+/* Sparkles */
+
+.sparkles::before{
+    content:"✨ ✨ ✨";
+    position:fixed;
+    left:50%;
+    top:50%;
+    font-size:25px;
+    animation:sparkle 3s infinite;
+}
+
+
+@keyframes heartFly{
+
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+
+@keyframes balloonFly{
+
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+
+@keyframes sparkle{
+
+    50%{
+        opacity:0.3;
+        transform:scale(1.5);
+    }
+
+}
+
+
+/* Login */
+
+#loginPage{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.login-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    width:320px;
+    box-shadow:0 0 25px #ff69b4;
+}
+
+
+.login-box h1{
+    color:#ff1493;
+}
+
+
+.login-box input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:10px;
+    border:1px solid #aaa;
+}
+
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:25px;
+    background:#ff69b4;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+
+/* Main */
+
+#mainPage{
+    text-align:center;
+    padding:20px;
+}
+
+
+.title{
+    color:white;
+    text-shadow:2px 2px 10px #ff1493;
+    margin:20px;
+}
+
+
+/* Photos */
+
+.photo-area img{
+    width:300px;
+    height:350px;
+    object-fit:contain;
+    border-radius:20px;
+    background:white;
+    box-shadow:0 0 20px white;
+    animation:fade 2s;
+}
+
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+
+.buttons{
+    margin:20px;
+}
+
+
+.quote-box{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    margin:20px auto;
+    width:80%;
+}
+
+
+.music,
+.letter-section,
+.cake-section{
+    margin:25px;
+}
+
+
+/* Cake */
+
+#cake{
+    font-size:100px;
+    cursor:pointer;
+}
+
+
+#birthdayMsg{
+    color:#ff1493;
+}
+
+
+
+@media(max-width:600px){
+
+    .photo-area img{
+        width:90%;
+        height:300px;
+    }
+
+
+    .quote-box{
+        width:95%;
+    }
+
+}
+/* Surprise Letter Animation */
+
+#letter{
+    background:white;
+    padding:25px;
+    margin:20px auto;
+    border-radius:20px;
+    width:80%;
+    box-shadow:0 0 20px #ff69b4;
+    animation:letterOpen 1.5s ease;
+}
+
+
+@keyframes letterOpen{
+
+    from{
+        transform:scale(0);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+/* Cake Celebration Animation */
+
+#cake{
+    transition:0.5s;
+}
+
+#cake:hover{
+    transform:scale(1.1);
+}
+
+
+#confetti{
+    font-size:35px;
+    animation:confettiMove 1.5s infinite;
+}
+
+
+@keyframes confettiMove{
+
+    0%{
+        transform:translateY(0);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-40px);
+        opacity:0;
+    }
+
+}

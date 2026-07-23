@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise 💙🩷</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Effects -->
+    <div class="hearts"></div>
+    <div class="balloons"></div>
+    <div class="sparkles"></div>
+
+
+    <!-- Login Page -->
+    <section id="loginPage">
+
+        <div class="login-box">
+
+            <h1>💙 Welcome 🩷</h1>
+            <p>Enter Your Surprise Login</p>
+
+            <input type="text" id="username" placeholder="Username">
+
+            <input type="password" id="password" placeholder="Password">
+
+            <button onclick="login()">Login</button>
+
+            <p id="error"></p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Main Website -->
+    <section id="mainPage" style="display:none;">
+
+        <h1 class="title">
+            💙 Happy Birthday Afri mah🩷
+        </h1>
+
+
+        <!-- Photo Section -->
+
+        <div class="photo-area">
+
+            <img id="photo" src="photos/photo1.jpg">
+
+            <div class="buttons">
+
+                <button onclick="previousPhoto()">⬅ Previous</button>
+
+                <button onclick="nextPhoto()">Next ➡</button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Quote -->
+
+        <div class="quote-box">
+
+            <h2 id="quote">
+                💌 Your Beautiful Quote
+            </h2>
+
+        </div>
+
+
+
+        <!-- Music -->
+
+        <div class="music">
+
+            <audio id="music" src="song.mp3"></audio>
+
+            <button onclick="playMusic()">
+                🎵 Play / Pause
+            </button>
+
+        </div>
+
+
+
+        <!-- Letter -->
+
+        <div class="letter-section">
+
+            <button onclick="openLetter()">
+                💌 Open Surprise Letter
+            </button>
+
+            <div id="letter" style="display:none;">
+
+                <h2>💙 My Surprise Letter 🩷</h2>
+
+                <p>
+                    Happy Birthday!  
+                    Wishing you lots of happiness and beautiful moments forever. 💖
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Cake -->
+
+        <div class="cake-section">
+
+            <div id="cake" onclick="celebrate()">
+                🎂
+            </div>
+
+            <h2 id="birthdayMsg"></h2>
+
+            <div id="confetti"></div>
+
+        </div>
+
+
+
+    </section>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
